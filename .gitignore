@@ -1,5 +1,5 @@
 # ============================================================
-# caras-main-lp = Cloudflare Pages の公開フォルダ（CARAS メインLP）
+# caras-main-lp = Cloudflare へ公開するフォルダ（CARAS メインLP）
 #
 # ★ホワイトリスト方式★
 # push.sh は `git add .` でフォルダ全体を巻き込む。
@@ -7,25 +7,28 @@
 #
 # 経緯: 2026-08-24 に別フォルダで336件の意図しない公開が発生（CLAUDE.md 教訓#013）。
 #       2026-09-15 にもこのLPの作業中、画像の原本31MBを公開フォルダへ置きかけた。
-#       → 注意ではなく構造で止める。許可を書かない限り公開されない。
+#       → 注意ではなく構造で止める。許可を書かない限りリポジトリに入らない。
 #
-# ▼ 公開したいものが増えたら、下に "!/ファイル名" を1行足す。
-#   画像は assets/ 配下の .webp なら自動で許可される。
-# ※ このファイル自体も公開URLから読めるため、ここに固有名詞・社外秘は書かない。
+# ▼ 実際にWeb配信されるのは public/ の中身だけ（wrangler.jsonc の assets.directory）。
+#   push.sh / .gitignore / wrangler.jsonc はリポジトリには入るが配信はされない。
+# ※ このファイルも公開リポジトリから読めるため、固有名詞・社外秘は書かない。
 # ============================================================
 
 # まず全部を非公開にする
 /*
 
-# --- 許可するもの ---
+# --- リポジトリに入れるもの ---
 !/.gitignore
 !/push.sh
-!/index.html
+!/wrangler.jsonc
 
-# 画像は assets/ の .webp だけを許可（作業ファイル・原本の混入を防ぐ）
-!/assets/
-/assets/*
-!/assets/*.webp
+# --- Web配信されるもの（public/ 配下） ---
+!/public/
+/public/*
+!/public/index.html
+!/public/assets/
+/public/assets/*
+!/public/assets/*.webp
 
 # --- 常に除外 ---
 .DS_Store

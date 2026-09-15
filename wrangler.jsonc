@@ -1,0 +1,10 @@
+{
+  // CARAS メインLP — 静的サイト配信の設定
+  // Cloudflare Workers の Static Assets で public/ の中身をそのまま配信する。
+  // ここに書いた public/ 以外（push.sh・.gitignore・この設定ファイル自身）は配信されない。
+  "name": "caras-lp",
+  "compatibility_date": "2026-09-15",
+  "assets": {
+    "directory": "./public"
+  }
+}
