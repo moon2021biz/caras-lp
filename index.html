@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【継続率100%】パーソナルジムCARAS西宮夙川</title>
+<meta name="description" content="西宮・夙川のパーソナルジムCARAS（カラス）。元日本代表オーナー監修による指導はリピート率100%。痩せるだけでなく肩こり・腰痛も改善する、男性はもちろん、初心者の女性に特にオススメの上質なボディメイク。店舗は手ぶらOK、ご自宅への出張も可能。まずは体験へ。">
+
+<!-- ▼ 検索には出さない設定（SEOは caras.co.jp に一本化する方針・2026-09-14）
+     検索にも出したくなったら、この1行を消してください -->
+<meta name="robots" content="noindex,follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="【継続率100%】パーソナルジムCARAS西宮夙川">
+<meta property="og:description" content="西宮・夙川のパーソナルジム。元日本代表オーナー監修。完全個室・マンツーマン・食事アドバイス。まずは体験へ。">
+<meta property="og:image" content="assets/s02.webp">
+<link rel="preload" as="image" href="assets/s02.webp">
+
+<style>
+  :root{
+    --gold:#c9a24a;
+    --gold-l:#f3dd8e;
+    --ink:#0d0d0d;
+    --w:600px;              /* LPの表示幅 */
+    --cta-h:64px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:#1a1a1a url("assets/bg.webp") center top / 480px auto repeat;
+    color:#fff;
+    font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,sans-serif;
+    padding-top:var(--cta-h);
+  }
+
+  /* ── 追従CTA ───────────────────────── */
+  .cta-bar{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    height:var(--cta-h);
+    display:flex; align-items:center; justify-content:center;
+    padding:8px 12px;
+    background:rgba(12,12,12,.82);
+    backdrop-filter:saturate(140%) blur(8px);
+    -webkit-backdrop-filter:saturate(140%) blur(8px);
+  }
+  .cta-btn{
+    display:flex; align-items:center; justify-content:center; gap:.55em;
+    width:88%; max-width:520px; height:46px;
+    border-radius:2px;
+    background:#0a0a0a; border:1px solid rgba(201,162,74,.62);
+    color:#e8d49a; text-decoration:none;
+    font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+    font-size:clamp(13px,3.9vw,16px); font-weight:600;
+    letter-spacing:.22em; text-indent:.22em;
+  }
+  .cta-btn:active{transform:translateY(1px)}
+
+  /* ── 画像スタック ─────────────────── */
+  .stack{max-width:var(--w); margin:0 auto; display:block; background:#000}
+  .stack img{
+    display:block; width:100%; height:auto;
+    margin:0; border:0; vertical-align:top;
+  }
+
+
+  /* ── 画像の上に重ねる要素（元LPではHTML要素だった） ── */
+  .ovl{position:relative; line-height:0; max-width:var(--w); margin:0 auto}
+  .ovl img{display:block; width:100%; height:auto}
+  .ovl__cta{
+    position:absolute; left:6.92%; top:75.9%; width:85.22%;
+    display:flex; flex-direction:column; align-items:center;
+  }
+  .ovl__line{
+    width:100%; aspect-ratio:271/54;
+    display:flex; align-items:center; justify-content:center; gap:.6em;
+    background:#111; border:1px solid rgba(0,0,0,.25);
+    color:#fff; text-decoration:none;
+    border-radius:2px; line-height:1.3; text-align:center;
+    font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+    font-size:min(4.2vw,25px); font-weight:600;
+    letter-spacing:.14em; text-indent:.14em;
+  }
+  .ovl__line svg{width:min(4.8vw,28px); height:auto; flex:0 0 auto; text-indent:0}
+  .ovl__note{
+    margin:2.95% 0 0; text-align:center; color:#595959; line-height:1.3;
+    font-size:min(4.37vw,26px);
+  }
+
+  /* ── フッター（元LP＝白地・黒文字） ── */
+  .foot{
+    max-width:var(--w); margin:0 auto; background:#fff; color:#000;
+    text-align:center; padding:6% 5% 7%;
+  }
+  .foot__h{font-size:min(6.56vw,39px); font-weight:700; margin:0 0 .35em; letter-spacing:.02em}
+  .foot__sub{font-size:min(4.69vw,28px); font-weight:700; margin:0 0 .7em}
+  .foot__line{
+    display:flex; align-items:center; justify-content:center; gap:3.5%;
+    width:82%; margin:0 auto; aspect-ratio:272/58;
+    border-radius:2px; background:#111; border:1px solid rgba(0,0,0,.25);
+    color:#fff; text-decoration:none; line-height:1.45;
+    font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+    font-size:min(3.9vw,23px); font-weight:600; letter-spacing:.1em;
+  }
+  .foot__line svg{width:min(5vw,29px); height:auto; flex:0 0 auto}
+  .foot__logo{width:49.4%; height:auto; margin:6% auto 0; display:block}
+  .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+  @media (min-width:680px){
+    body{background-size:640px auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- 追従CTA：行き先は caras.co.jp の申込フォーム（元LPと同じ） -->
+<div class="cta-bar">
+  <a class="cta-btn" href="https://caras.co.jp/entry#form">今すぐ体験予約する<span aria-hidden="true">›</span></a>
+</div>
+
+<h1 class="sr-only">パーソナルジムCARAS 西宮夙川</h1>
+
+<main class="stack">
+  <!-- ヒーロー〜理由 -->
+  <img srcset="assets/s02-420.webp 420w, assets/s02-760.webp 760w, assets/s02.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s02.webp" width="1100" height="2186" alt="あなただけのトレーニングで理想のBODYMAKE｜完全個室／駅徒歩5分・マンツーマン・バランスの良い食事アドバイス可能・会員様の継続率100%の実績" fetchpriority="high" decoding="async">
+  <img srcset="assets/s03-420.webp 420w, assets/s03-760.webp 760w, assets/s03.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s03.webp" width="1100" height="2245" alt="会員様の継続率100%。その理由を正直にお答えします。40〜50代の女性が長く美しく在り続けるために必要なものを3つに絞りました。理由1 機能解剖学に基づく、体に負担をかけない正しいトレーニング" decoding="async">
+  <img srcset="assets/s04-420.webp 420w, assets/s04-760.webp 760w, assets/s04.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s04.webp" width="1100" height="1398" alt="理由2 妥協しない環境—担当トレーナー固定・完全個室・マンツーマン" loading="lazy" decoding="async">
+  <img srcset="assets/s05-420.webp 420w, assets/s05-760.webp 760w, assets/s05.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s05.webp" width="1100" height="1459" alt="理由3 食事も含めた生活の質ごと上げる丁寧なサポート" loading="lazy" decoding="async">
+  <!-- お悩み -->
+  <img srcset="assets/s06-420.webp 420w, assets/s06-760.webp 760w, assets/s06.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s06.webp" width="1100" height="1880" alt="こんなお悩みありませんか？痩せる方法がわからない／健康的な身体になりたい／自分に自信を持ちたい／正しい食事と運動を知りたい／どこのジムにしようか悩んでいる" loading="lazy" decoding="async">
+  <img srcset="assets/s07-420.webp 420w, assets/s07-760.webp 760w, assets/s07.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s07.webp" width="1100" height="2380" alt="すべてCARASにお任せください。目的に合わせたあなただけのトレーニングメニューをご提案します。CARASがお届けする最高のトレーニング環境" loading="lazy" decoding="async">
+  <!-- トレーニング環境 -->
+  <img srcset="assets/s08-420.webp 420w, assets/s08-760.webp 760w, assets/s08.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s08.webp" width="1100" height="1840" alt="01 完全プライベート空間でのマンツーマントレーニング（FULL PRIVATE）完全個室・専属トレーナー" loading="lazy" decoding="async">
+  <img srcset="assets/s09-420.webp 420w, assets/s09-760.webp 760w, assets/s09.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s09.webp" width="1100" height="2380" alt="02 ご希望の場所でどこでもトレーニング。西宮・夙川駅徒歩5分圏内のジムに加え、ご自宅や職場でのトレーニングも可能。オンライントレーニング対応・主婦の方にもオススメ" loading="lazy" decoding="async">
+  <img srcset="assets/s10-420.webp 420w, assets/s10-760.webp 760w, assets/s10.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s10.webp" width="1100" height="1662" alt="03 専属トレーナーによる徹底サポート（EXCLUSIVE TRAINER）LINEでのお食事指導・迅速なレスポンス" loading="lazy" decoding="async">
+  <!-- お客様の声 -->
+  <img srcset="assets/s11-420.webp 420w, assets/s11-760.webp 760w, assets/s11.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s11.webp" width="1100" height="2281" alt="お客様の声 VOICE（N.S様・A.Y様）" loading="lazy" decoding="async">
+  <img srcset="assets/s12-420.webp 420w, assets/s12-760.webp 760w, assets/s12.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s12.webp" width="1100" height="2245" alt="代表トレーナー HEAD TRAINER 荻田大樹（オリンピック日本代表／世界選手権3大会代表／NESTA認定パーソナルトレーナー）" loading="lazy" decoding="async">
+  <!-- 代表トレーナー -->
+  <img srcset="assets/s13-420.webp 420w, assets/s13-760.webp 760w, assets/s13.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s13.webp" width="1100" height="1785" alt="料金 PRICE｜体験50分 5,500円（税込・カウンセリング＋パーソナルトレーニング）／入会金 33,000円／トライアル 39,600円→今だけ50%OFF 19,800円（食事指導毎日＋パーソナル4回）／基本コース 70,400円 2ヶ月目安（食事指導毎日＋パーソナル8回）" loading="lazy" decoding="async">
+  <!-- LINE個別相談（ボタンと注記は元LPではHTML要素・実測位置で重ねる） -->
+</main>
+<div class="ovl">
+  <img srcset="assets/s14-420.webp 420w, assets/s14-760.webp 760w, assets/s14.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s14.webp" width="1100" height="1923" alt="ご不明な点は、担当トレーナーに直接ご相談ください。料金・スケジュール・体験の流れなど、LINEから担当トレーナーが直接お答えします" loading="lazy" decoding="async">
+  <div class="ovl__cta">
+    <a class="ovl__line" href="https://lin.ee/y4JCpMb"><svg viewBox="0 0 24 24" fill="#06C755" aria-hidden="true"><path d="M12 2C6.5 2 2 5.8 2 10.4c0 4.1 3.6 7.6 8.4 8.3.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6s5.9-3.5 8-6c1.5-1.6 2.2-3.3 2.2-5.3C22 5.8 17.5 2 12 2z"/></svg>LINEで個別相談する</a>
+    <p class="ovl__note">無理な営業・勧誘は一切行いません</p>
+  </div>
+</div>
+<main class="stack">
+  <!-- 入会までの流れ -->
+  <img srcset="assets/s15-420.webp 420w, assets/s15-760.webp 760w, assets/s15.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s15.webp" width="1100" height="1619" alt="入会までの流れ FLOW／FLOW 01 体験予約：体験予約フォームあるいはお電話にてお申し込みください" loading="lazy" decoding="async">
+  <img srcset="assets/s16-420.webp 420w, assets/s16-760.webp 760w, assets/s16.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s16.webp" width="1100" height="1361" alt="FLOW 02 カウンセリング：ジムにお越し頂き、気になる部位や目的に応じたオリジナルプログラムをご提案します" loading="lazy" decoding="async">
+  <img srcset="assets/s17-420.webp 420w, assets/s17-760.webp 760w, assets/s17.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s17.webp" width="1100" height="1341" alt="FLOW 03 トレーニング：お身体の状態やコンディションを確認して、必要なストレッチやトレーニングを実施します" loading="lazy" decoding="async">
+  <img srcset="assets/s18-420.webp 420w, assets/s18-760.webp 760w, assets/s18.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s18.webp" width="1100" height="1257" alt="FLOW 04 食事確認：LINEにて1日のお食事をお送りいただき、減らすべき食品・増やすべき栄養素を細かくアドバイスします" loading="lazy" decoding="async">
+  <!-- アクセス -->
+  <img srcset="assets/s19-420.webp 420w, assets/s19-760.webp 760w, assets/s19.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s19.webp" width="1100" height="853" alt="アクセス ACCESS 西宮店 〒662-0063 兵庫県西宮市相生町8-25 イーズハイツ夙川202号／営業時間 9:00-23:00／阪急神戸本線 夙川駅より徒歩5分" loading="lazy" decoding="async">
+</main>
+
+<footer class="foot">
+  <p class="foot__h">お問い合わせ・ご相談は</p>
+  <p class="foot__sub">CARASの公式LINEが便利です！</p>
+  <a class="foot__line" href="https://lin.ee/y4JCpMb">
+    <svg viewBox="0 0 24 24" fill="#06C755" aria-hidden="true"><path d="M12 2C6.5 2 2 5.8 2 10.4c0 4.1 3.6 7.6 8.4 8.3.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6s5.9-3.5 8-6c1.5-1.6 2.2-3.3 2.2-5.3C22 5.8 17.5 2 12 2z"/></svg>
+    <span>LINEで友達登録して<br>気軽に質問する！</span>
+  </a>
+  <img class="foot__logo" src="assets/logo.webp" width="158" height="30" alt="CARAS" loading="lazy" decoding="async">
+</footer>
+
+<!-- Matomo（caras.co.jp と同じ解析サーバー・同じサイトID 1471）
+     ※ Matomo側で「このドメインも対象」にする設定が必要な場合があります（未確認） -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics02.ssl-link.jp/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1471']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+</body>
+</html>
