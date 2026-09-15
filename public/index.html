@@ -167,19 +167,7 @@
   <img class="foot__logo" src="assets/logo.webp" width="158" height="30" alt="CARAS" loading="lazy" decoding="async">
 </footer>
 
-<!-- Matomo（caras.co.jp と同じ解析サーバー・同じサイトID 1471）
-     ※ Matomo側で「このドメインも対象」にする設定が必要な場合があります（未確認） -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://analytics02.ssl-link.jp/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1471']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
+<!-- Cloudflare Web Analytics（Cookie不使用・同意バナー不要） -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dd34e278d64f4511b5513c81100feb87"}'></script>
 </body>
 </html>
