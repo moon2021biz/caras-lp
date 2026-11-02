@@ -104,6 +104,21 @@
   }
   .foot__line svg{width:min(5vw,29px); height:auto; flex:0 0 auto}
   .foot__logo{width:49.4%; height:auto; margin:6% auto 0; display:block}
+  /* ── 料金下の申込み ── */
+  .book{
+    max-width:var(--w); margin:0 auto; background:#0d0d0d; color:#fff;
+    text-align:center; padding:28px 6% 30px; border-top:1px solid rgba(201,162,74,.4);
+  }
+  .book__h{margin:0; font-size:clamp(20px,5.6vw,28px); font-weight:700; color:var(--gold-l); letter-spacing:.06em}
+  .book__sub{margin:.4em 0 1.1em; font-size:clamp(13px,3.7vw,16px); color:#ddd}
+  .book__line{
+    display:flex; align-items:center; justify-content:center;
+    width:100%; max-width:440px; height:56px; margin:0 auto;
+    border-radius:4px; background:#06C755; color:#fff; text-decoration:none;
+    font-size:clamp(16px,4.6vw,19px); font-weight:700; letter-spacing:.08em;
+  }
+  .book__note{margin:.8em 0 1.2em; font-size:clamp(12px,3.4vw,14px); color:#bbb; line-height:1.6}
+  .book__form{color:#e8d49a; font-size:clamp(13px,3.6vw,15px)}
   .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
   @media (min-width:680px){
@@ -113,9 +128,10 @@
 </head>
 <body>
 
-<!-- 追従CTA：行き先は caras.co.jp の申込フォーム（元LPと同じ） -->
+<!-- 追従CTA：LINEで体験予約（2026-11-02 変更。旧＝caras.co.jp の申込フォーム）
+     スマホでは定型文入りのトークを開く（「広告のページを見ました」で来た経路を数える）。PCは友だち追加 -->
 <div class="cta-bar">
-  <a class="cta-btn" href="https://caras.co.jp/entry#form">今すぐ体験予約する<span aria-hidden="true">›</span></a>
+  <a class="cta-btn js-line-book" href="https://lin.ee/y4JCpMb">LINEで体験予約する<span aria-hidden="true">›</span></a>
 </div>
 
 <h1 class="sr-only">パーソナルジムCARAS 西宮夙川</h1>
@@ -140,6 +156,14 @@
   <img srcset="assets/s13-420.webp 420w, assets/s13-760.webp 760w, assets/s13.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s13.webp" width="1100" height="1785" alt="料金 PRICE｜体験50分 5,500円（税込・カウンセリング＋パーソナルトレーニング）／入会金 33,000円／トライアル 39,600円→今だけ50%OFF 19,800円（食事指導毎日＋パーソナル4回）／基本コース 70,400円 2ヶ月目安（食事指導毎日＋パーソナル8回）" loading="lazy" decoding="async">
   <!-- LINE個別相談（ボタンと注記は元LPではHTML要素・実測位置で重ねる） -->
 </main>
+<!-- 料金のすぐ下の申込み（2026-11-02 追加） -->
+<section class="book" aria-label="体験のお申し込み">
+  <p class="book__h">体験 50分 5,500円</p>
+  <p class="book__sub">阪急 夙川駅から徒歩5分・西宮店</p>
+  <a class="book__line js-line-book" href="https://lin.ee/y4JCpMb">LINEで体験予約する</a>
+  <p class="book__note">日時とお名前を送るだけ。担当トレーナーがお返事します</p>
+  <a class="book__form" href="https://caras.co.jp/entry#form">フォームで申し込む方はこちら</a>
+</section>
 <div class="ovl">
   <img srcset="assets/s14-420.webp 420w, assets/s14-760.webp 760w, assets/s14.webp 1100w" sizes="(min-width:600px) 600px, 100vw" src="assets/s14.webp" width="1100" height="1923" alt="ご不明な点は、担当トレーナーに直接ご相談ください。料金・スケジュール・体験の流れなど、LINEから担当トレーナーが直接お答えします" loading="lazy" decoding="async">
   <div class="ovl__cta">
@@ -166,6 +190,17 @@
   </a>
   <img class="foot__logo" src="assets/logo.webp" width="158" height="30" alt="CARAS" loading="lazy" decoding="async">
 </footer>
+
+<script>
+// スマホだけ、LINEのトークを定型文入りで開く（PCではこのリンクがLINEのトップに飛ぶため友だち追加のまま）
+// （最近のiPadは「Mac」と名乗るので、タッチ操作できるMacもiPadとして扱う）
+if (/iPhone|iPad|Android/i.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1)) {
+  var t = '体験を予約したいです（広告のページを見ました）\n希望の日時：\nお名前：';
+  document.querySelectorAll('.js-line-book').forEach(function (a) {
+    a.href = 'https://line.me/R/oaMessage/%40305ynpnn/?' + encodeURIComponent(t);
+  });
+}
+</script>
 
 <!-- Cloudflare Web Analytics（Cookie不使用・同意バナー不要） -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dd34e278d64f4511b5513c81100feb87"}'></script>
