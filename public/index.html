@@ -227,12 +227,16 @@
 <script>
 // スマホだけ、LINEのトークを定型文入りで開く（PCではこのリンクがLINEのトップに飛ぶため友だち追加のまま）
 // （最近のiPadは「Mac」と名乗るので、タッチ操作できるMacもiPadとして扱う）
-if (/iPhone|iPad|Android/i.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1)) {
-  var t = '体験を予約したいです（広告のページを見ました）\n希望の日時：\nお名前：';
+// 紹介動画を再生した人は「広告のページ・動画を見ました」になる＝届いたLINEで、動画を見て予約したかが分かる（2026-11-04）
+var isTouch = /iPhone|iPad|Android/i.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+function setLineText(seen) {
+  if (!isTouch) return;
+  var t = '体験を予約したいです（' + seen + 'を見ました）\n希望の日時：\nお名前：';
   document.querySelectorAll('.js-line-book').forEach(function (a) {
     a.href = 'https://line.me/R/oaMessage/%40305ynpnn/?' + encodeURIComponent(t);
   });
 }
+setLineText('広告のページ');
 
 // 紹介動画：押したらサムネイルを YouTube のプレーヤーに差し替える（Cookieを抑える youtube-nocookie を使用）
 document.querySelectorAll('.movie__play').forEach(function (b) {
@@ -243,6 +247,7 @@ document.querySelectorAll('.movie__play').forEach(function (b) {
     f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
     f.allowFullscreen = true;
     b.replaceWith(f);
+    setLineText('広告のページ・動画');
   }, { once: true });
 });
 </script>
